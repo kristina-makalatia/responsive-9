@@ -1,3 +1,8 @@
+/* variables */
+:root {
+    --element-size: 16px;
+}
+
 /* header styles */
 .container {
     max-width: 1088px;
@@ -6,10 +11,16 @@
     background-color: lightblue;
 }
 .flex-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .nav-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .header-bg {
@@ -42,24 +53,44 @@
     width: 23%;
     height: 260px;
     background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .block-wraper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .blue-block {
     width: 59px;
     height: 58px;
     background-color: #5863F8;
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .block p {
     width: 221px;
@@ -68,9 +99,14 @@
 
 /* section#2 styles */
 .image-wraper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .image-wraper img {
     width: 30%;
@@ -81,8 +117,12 @@
     max-width: 1030px;
     width: 80%;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     color:#fff;
 }
 .footer-bg {
@@ -92,6 +132,83 @@
 .footer-block:nth-child(1) {
     width: 260px;
 }
+
+/* form styles */
+.input-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.form-wraper {
+    max-width: 700px;
+    width: 80%;
+    margin:0 auto;
+}
+.input {
+    height: 60px;
+    margin:15px 0;
+    color:red;
+    font-size: 20px;
+    border:none; 
+    border-bottom: 2px solid blue;
+    /* border-radius: 34px; */
+}
+.input::-webkit-input-placeholder, .textarea-block::-webkit-input-placeholder {
+    color:blue;
+    font-size: var(--element-size);
+}
+.input::-moz-placeholder, .textarea-block::-moz-placeholder {
+    color:blue;
+    font-size: var(--element-size);
+}
+.input:-ms-input-placeholder, .textarea-block:-ms-input-placeholder {
+    color:blue;
+    font-size: var(--element-size);
+}
+.input::-ms-input-placeholder, .textarea-block::-ms-input-placeholder {
+    color:blue;
+    font-size: var(--element-size);
+}
+.input::placeholder,
+.textarea-block::placeholder {
+    color:blue;
+    font-size: var(--element-size);
+}
+.input:focus,
+.textarea-block:focus {
+    outline: none;
+}
+.select-block {
+    width: 320px;
+}
+/* .input[type="password"] {
+    background-color: lightblue;
+} */
+.btn-submit {
+    width: 250px;
+    height: 60px;
+    background-color: blueviolet;
+    color:#fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top:var(--element-size);
+}
+.textarea-block {
+    height: 200px;
+    margin-bottom: var(--element-size);
+    resize:none;
+    color:red;
+    font-size: 20px;
+}
+
+
+
+
 /* responsive */
 @media (max-width:1200px) {
     .block {
@@ -119,7 +236,9 @@
         width: 80%;
     }
     .image-wraper {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .image-wraper img:nth-child(2) {
         margin: 30px 0;

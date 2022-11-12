@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="css/about.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/about.css" />
+  </head>
+  <body>
     <header class="header-bg">
         <div class="container flex-header" >
             <a href="index.html">LOGO</a>
@@ -20,7 +23,7 @@
                     <li class="nav-li"><a href="#">About</a></li>
                     <li class="nav-li"><a href="#">News</a></li>
                     <li class="nav-li"><a href="#">Blog</a></li>
-                    <li class="nav-li"><a href="#">Services</a></li>
+                    <li class="nav-li"><a href="#services-section">Services</a></li>
                 </ul>
             </nav>
             <div class="burgerBar">
@@ -28,6 +31,77 @@
             </div>
         </div>
     </header>
+
+    <section>
+      <h2>Form</h2>
+      <form action="" class="form-wraper">
+        <div class="input-block">
+          <label for="myusername">Username</label>
+          <input
+            class="input"
+            type="text"
+            id="myusername"
+            name="username"
+            placeholder="enter your username..."
+            required
+          />
+        </div>
+
+        <div class="input-block">
+          <label for="passw">Password</label>
+          <input
+            class="input"
+            type="password"
+            name="mypassw"
+            id="passw"
+            placeholder="enter your password..."
+            required
+          />
+        </div>
+
+        <div class="input-block">
+          <label for="textareamessage">Your Message</label>
+          <textarea
+            class="textarea-block"
+            name="message"
+            id="textareamessage"
+            placeholder="Enter your Review.."
+          ></textarea>
+        </div>
+
+        <div class="input-block">
+          <label for="">Choose Language:</label>
+          <select class="select-block" name="plan" id="plan">
+            <option value="none" selected disabled hidden>
+              Select Language
+            </option>
+            <option value="free">Html</option>
+            <option value="starter">Javascript</option>
+            <option value="professional">Python</option>
+            <option value="corporate">Node Js</option>
+          </select>
+        </div>
+
+        <div>
+            <div>
+                <input type="radio" id="gender-male" name="usergender">
+                <label for="gender-male">Male</label>
+            </div>
+            <div>
+                <input type="radio" id="gender-female" name="usergender">
+                <label for="gender-female">Female</label>
+            </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="hobbymusic" id="music">
+            <label for="music">Music</label>
+            <input type="checkbox" name="hobbydance" id="dance">
+            <label for="dance">Dance</label>
+        </div>
+        <button class="btn-submit" type="submit">Submit</button>
+      </form>
+    </section>
 
     <section class="section-bg">
         <div class="container">
@@ -67,9 +141,9 @@
             </div>
 
         </div>
-    </section>
+    </section> 
 
-    <section>
+    <section id="services-section">
         <div class="container">
             <div class="text-block">
                 <h3>About</h3>
@@ -122,9 +196,6 @@
                 </ul>
             </div>
         </div>
-    </footer>
-
-
-    
-</body>
+    </footer> 
+  </body>
 </html>
